@@ -1,3 +1,4 @@
+// App.js
 import { Routes, Route } from "react-router-dom";
 import { useState } from "react";
 import Products from "./components/Products/Products";
@@ -11,7 +12,6 @@ import Footer from "./components/Footer/Footer";
 function App() {
   const [cartItems, setCartItems] = useState([]);
   const [isClick, setIsClick] = useState({});
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   const handleAddToCart = (product) => {
     if (!isClick[product.id]) {
@@ -34,7 +34,7 @@ function App() {
         <Route path="/products/:id" element={<Product handleAddToCart={handleAddToCart} isClick={isClick} />} />
         <Route path="/cart" element={<Cart cartItems={cartItems} handleRemoveFromCart={handleRemoveFromCart} />} />
         <Route path="/checkout" element={<Checkout />} />
-        <Route path="/login" element={<Login setIsLoggedIn={setIsLoggedIn} />} />
+        <Route path="/login" element={<Login />} />
       </Routes>
 
       <Footer />
