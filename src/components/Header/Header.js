@@ -24,7 +24,7 @@ function Header({ cartItems, handleRemoveFromCart }) {
                 <div className="relative">
                     <button onClick={() => setIsCartOpen(!isCartOpen)} className="relative">
                         <img
-                            src="api/images/shopping-cart.png"
+                            src="api/images/shoppingcart.png"
                             alt="Shopping Cart"
                             className="w-7 h-7 cursor-pointer text-white"
                         />
